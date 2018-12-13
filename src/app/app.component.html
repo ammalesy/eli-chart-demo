@@ -1,20 +1,272 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<h2 class="title is-2">Admin</h2>
+<div class="container">
+    <h3 class="subtitle is-3">กราฟแสดงรายได้การขายหนังสือของระบบ</h3>
+    <chart [type]="typeChartAdmin1" [data]="dataChartAdmin1" [options]="optionsChartAdmin1"></chart>
+</div>
+<hr>
+
+<div class="container">
+    <h3 class="subtitle is-3">กราฟแสดงรายจ่ายแบ่งตามสำนักพิมพ์ </h3>
+    <chart [type]="typeChartAdmin2" [data]="dataChartAdmin2" [options]="optionsChartAdmin2"></chart>
+</div>
+<hr>
+
+<div class="container">
+    <h3 class="subtitle is-3">กราฟแสดงรายจ่ายแบ่งตามสำนักพิมพ์ </h3>
+    <chart [type]="typeChartAdmin3" [data]="dataChartAdmin3" [options]="optionsChartAdmin3"></chart>
+</div>
+<hr>
+
+<div class="container">
+    <h3 class="subtitle is-3">ตารางรายได้จากการขายหนังสือ</h3>
+    <table class="table">
+        <thead>
+          <tr>
+            <th><abbr title="Position">วันที่</abbr></th>
+            <th>Team</th>
+            <th><abbr title="Played">ชื่อหนังสือ</abbr></th>
+            <th><abbr title="Won">สำนักพิมพ์</abbr></th>
+            <th><abbr title="Drawn">จำนวน (เล่ม)</abbr></th>
+            <th><abbr title="Lost">ราคาขาย (ต่อเล่ม)</abbr></th>
+            <th><abbr title="Goals for">% ส่วนแบ่ง</abbr></th>
+            <th><abbr title="Goals against">กำไรรวม (บาท)</abbr></th>
+            <th><abbr title="Goal difference">จ่ายสำนักพิมพ์รวม (บาท)</abbr></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1 Jan</th>
+            <td>/_</td>
+            <td>38</td>
+            <td>23</td>
+            <td>12</td>
+            <td>3</td>
+            <td>68</td>
+            <td>36</td>
+            <td>+32</td>
+          </tr>
+
+        </tbody>
+      </table>
+</div>
+<hr>
+<div class="container">
+    <h3 class="subtitle is-3">ตารางรายได้จากการเติมเงิน</h3>
+    <table class="table">
+        <thead>
+          <tr>
+            <th><abbr title="Position">วันที่</abbr></th>
+            <th>Team</th>
+            <th><abbr title="Played">ชื่อหนังสือ</abbr></th>
+            <th><abbr title="Won">สำนักพิมพ์</abbr></th>
+            <th><abbr title="Drawn">จำนวน (เล่ม)</abbr></th>
+            <th><abbr title="Lost">ราคาขาย (ต่อเล่ม)</abbr></th>
+            <th><abbr title="Goals for">% ส่วนแบ่ง</abbr></th>
+            <th><abbr title="Goals against">กำไรรวม (บาท)</abbr></th>
+            <th><abbr title="Goal difference">จ่ายสำนักพิมพ์รวม (บาท)</abbr></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1 Jan</th>
+            <td>/_</td>
+            <td>38</td>
+            <td>23</td>
+            <td>12</td>
+            <td>3</td>
+            <td>68</td>
+            <td>36</td>
+            <td>+32</td>
+          </tr>
+
+        </tbody>
+      </table>
+</div>
+<hr>
+<div class="container">
+    <h3 class="subtitle is-3">ตารางรายจ่ายให้สำนักพิมพ์</h3>
+    <table class="table">
+        <thead>
+          <tr>
+            <th><abbr title="Position">วันที่</abbr></th>
+            <th>Team</th>
+            <th><abbr title="Played">ชื่อหนังสือ</abbr></th>
+            <th><abbr title="Won">สำนักพิมพ์</abbr></th>
+            <th><abbr title="Drawn">จำนวน (เล่ม)</abbr></th>
+            <th><abbr title="Lost">ราคาขาย (ต่อเล่ม)</abbr></th>
+            <th><abbr title="Goals for">% ส่วนแบ่ง</abbr></th>
+            <th><abbr title="Goals against">กำไรรวม (บาท)</abbr></th>
+            <th><abbr title="Goal difference">จ่ายสำนักพิมพ์รวม (บาท)</abbr></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1 Jan</th>
+            <td>/_</td>
+            <td>38</td>
+            <td>23</td>
+            <td>12</td>
+            <td>3</td>
+            <td>68</td>
+            <td>36</td>
+            <td>+32</td>
+          </tr>
+
+        </tbody>
+      </table>
+</div>
+
+<!-- Publisher -->
+<h2 class="title is-2">Publisher</h2>
+<div class="container">
+    <h3 class="subtitle is-3">กราฟแสดงรายได้การขายหนังสือรวม</h3>
+    <chart [type]="typeChartAdmin1" [data]="dataChartAdmin1" [options]="optionsChartAdmin1"></chart>
+</div>
+<hr>
+
+<div class="container">
+    <h3 class="subtitle is-3">กราฟแสดงรายได้การขายหนังสือตามประเภทหนังสือ </h3>
+    <chart [type]="typeChartAdmin2" [data]="dataChartAdmin2" [options]="optionsChartAdmin2"></chart>
+</div>
+<hr>
+
+<div class="container">
+    <h3 class="subtitle is-3">กราฟแสดงรายได้ขายหนังสือตามชื่อหนังสือ</h3>
+    <chart [type]="typeChartAdmin3" [data]="dataChartAdmin3" [options]="optionsChartAdmin3"></chart>
+</div>
+<hr>
+
+<div class="container">
+    <h3 class="subtitle is-3">ตารางรายได้จากการขายหนังสือ</h3>
+    <table class="table">
+        <thead>
+          <tr>
+            <th><abbr title="Position">วันที่</abbr></th>
+            <th>Team</th>
+            <th><abbr title="Played">ชื่อหนังสือ</abbr></th>
+            <th><abbr title="Won">สำนักพิมพ์</abbr></th>
+            <th><abbr title="Drawn">จำนวน (เล่ม)</abbr></th>
+            <th><abbr title="Lost">ราคาขาย (ต่อเล่ม)</abbr></th>
+            <th><abbr title="Goals for">% ส่วนแบ่ง</abbr></th>
+            <th><abbr title="Goals against">กำไรรวม (บาท)</abbr></th>
+            <th><abbr title="Goal difference">จ่ายสำนักพิมพ์รวม (บาท)</abbr></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1 Jan</th>
+            <td>/_</td>
+            <td>38</td>
+            <td>23</td>
+            <td>12</td>
+            <td>3</td>
+            <td>68</td>
+            <td>36</td>
+            <td>+32</td>
+          </tr>
+
+        </tbody>
+      </table>
+</div>
+<hr>
+
+<!-- Library -->
+<h2 class="title is-2">Library</h2>
+<div class="container">
+    <h3 class="subtitle is-3">กราฟแสดงรายได้รวม / รายจ่ายรวม</h3>
+    <chart [type]="typeChartAdmin1" [data]="dataChartAdmin1" [options]="optionsChartAdmin1"></chart>
+</div>
+<hr>
+
+<div class="container">
+    <h3 class="subtitle is-3">กราฟแสดงรายได้จากการให้ยืมหนังสือ (ตามประเภท) </h3>
+    <chart [type]="typeChartAdmin2" [data]="dataChartAdmin2" [options]="optionsChartAdmin2"></chart>
+</div>
+<hr>
+
+<div class="container">
+    <h3 class="subtitle is-3">กราฟแสดงรายได้จากการให้ยืมหนังสือ (ตามชื่อหนังสือ)</h3>
+    <chart [type]="typeChartAdmin3" [data]="dataChartAdmin3" [options]="optionsChartAdmin3"></chart>
+</div>
+<hr>
+
+<div class="container">
+    <h3 class="subtitle is-3">กราฟแสดงรายจ่ายจากการซื้อหนังสือ (ตามประเภทหนังสือ) </h3>
+    <chart [type]="typeChartAdmin2" [data]="dataChartAdmin2" [options]="optionsChartAdmin2"></chart>
+</div>
+<hr>
+
+<div class="container">
+    <h3 class="subtitle is-3">กราฟแสดงรายจ่ายจากการซื้อหนังสือ (ตามชื่อหนังสือ) </h3>
+    <chart [type]="typeChartAdmin2" [data]="dataChartAdmin2" [options]="optionsChartAdmin2"></chart>
+</div>
+<hr>
+
+<div class="container">
+    <h3 class="subtitle is-3">ตารางรายได้จากการให้ยืมหนังสือ</h3>
+    <table class="table">
+        <thead>
+          <tr>
+            <th><abbr title="Position">วันที่</abbr></th>
+            <th>Team</th>
+            <th><abbr title="Played">ชื่อหนังสือ</abbr></th>
+            <th><abbr title="Won">สำนักพิมพ์</abbr></th>
+            <th><abbr title="Drawn">จำนวน (เล่ม)</abbr></th>
+            <th><abbr title="Lost">ราคาขาย (ต่อเล่ม)</abbr></th>
+            <th><abbr title="Goals for">% ส่วนแบ่ง</abbr></th>
+            <th><abbr title="Goals against">กำไรรวม (บาท)</abbr></th>
+            <th><abbr title="Goal difference">จ่ายสำนักพิมพ์รวม (บาท)</abbr></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1 Jan</th>
+            <td>/_</td>
+            <td>38</td>
+            <td>23</td>
+            <td>12</td>
+            <td>3</td>
+            <td>68</td>
+            <td>36</td>
+            <td>+32</td>
+          </tr>
+
+        </tbody>
+      </table>
+</div>
+<hr>
+<div class="container">
+    <h3 class="subtitle is-3">ตารางรายจ่ายจากการซื้อหนังสือ</h3>
+    <table class="table">
+        <thead>
+          <tr>
+            <th><abbr title="Position">วันที่</abbr></th>
+            <th>Team</th>
+            <th><abbr title="Played">ชื่อหนังสือ</abbr></th>
+            <th><abbr title="Won">สำนักพิมพ์</abbr></th>
+            <th><abbr title="Drawn">จำนวน (เล่ม)</abbr></th>
+            <th><abbr title="Lost">ราคาขาย (ต่อเล่ม)</abbr></th>
+            <th><abbr title="Goals for">% ส่วนแบ่ง</abbr></th>
+            <th><abbr title="Goals against">กำไรรวม (บาท)</abbr></th>
+            <th><abbr title="Goal difference">จ่ายสำนักพิมพ์รวม (บาท)</abbr></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1 Jan</th>
+            <td>/_</td>
+            <td>38</td>
+            <td>23</td>
+            <td>12</td>
+            <td>3</td>
+            <td>68</td>
+            <td>36</td>
+            <td>+32</td>
+          </tr>
+
+        </tbody>
+      </table>
+</div>
+<hr>
